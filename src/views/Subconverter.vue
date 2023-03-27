@@ -154,12 +154,21 @@
 
               <el-form-item label-width="0px" style="margin-top: 40px; text-align: center">
                 <el-button
-                    style="width: 250px"
+                    style="width: 120px"
                     type="danger"
                     @click="makeUrl"
                     :disabled="form.sourceSubUrl.length === 0"
                 >生成订阅链接
                 </el-button>
+                <el-button
+                    style="width: 120px"
+                    type="danger"
+                    @click="clashInstall"
+                    icon="el-icon-connection"
+                    :disabled="customSubUrl.length === 0"
+                >一键导入Clash
+                </el-button>
+
                 <!--                <el-button-->
                 <!--                    style="width: 120px"-->
                 <!--                    type="danger"-->
@@ -183,10 +192,9 @@
                 <el-button
                     style="width: 120px"
                     type="primary"
-                    @click="clashInstall"
-                    icon="el-icon-connection"
-                    :disabled="customSubUrl.length === 0"
-                >一键导入Clash
+                    @click="appearObject"
+                    :disabled="form.sourceSubUrl.length === 0"
+                >显示参数
                 </el-button>
               </el-form-item>
               <el-form-item label-width="0px" style="text-align: center">
@@ -604,6 +612,14 @@ export default {
       const url = 'surge://install-config?url='
       window.open(url + this.customSubUrl)
     },
+    appearObject(){
+      this.$notify({
+        title: '提示',
+        dangerouslyUseHTMLString: true,
+        message: `<pre>${JSON.stringify(this.form,null,4)}</pre>`,
+        duration: 0
+      });
+    },
     makeUrl() {
       if (this.form.sourceSubUrl === '' || this.form.clientType === '') {
         this.$message.error('订阅链接与客户端为必填项')
@@ -896,5 +912,8 @@ export default {
     }
 
   }
+}
+.el-notification{
+  width: unset;
 }
 </style>
