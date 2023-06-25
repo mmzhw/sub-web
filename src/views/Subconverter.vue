@@ -540,7 +540,7 @@ export default {
 
       form: {
         sourceSubUrl: '',
-        clientType: 'clash&new_name=true',
+        clientType: 'clash',
         customBackend: 'https://augus.myqnapcloud.com:39103/sub?',
         remoteConfig: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini',
         excludeRemarks: '',
