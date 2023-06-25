@@ -197,6 +197,20 @@
                 >显示参数
                 </el-button>
               </el-form-item>
+              <el-form-item label-width="0px" style="text-align: center" v-if="isadmin">
+                <el-button
+                    style="width: 120px"
+                    type="primary"
+                    @click="copyUrl1"
+                >原始跳转连接
+                </el-button>
+                <el-button
+                    style="width: 120px"
+                    type="primary"
+                    @click="copyUrl2"
+                >转换跳转连接
+                </el-button>
+              </el-form-item>
               <el-form-item label-width="0px" style="text-align: center">
                 <el-button
                     style="width: 250px"
@@ -298,6 +312,7 @@ export default {
     return {
       backendVersion: '',
       advanced: '2',
+      isadmin:this.$route.query.isadmin,
 
       // 是否为 PC 端
       isPC: true,
@@ -323,7 +338,7 @@ export default {
         },
         backendOptions: [
           {
-            value: 'https://augus.myqnapcloud.com:25499/sub?',
+            value: 'https://augus.myqnapcloud.com:39103/sub?',
             label: 'myqnapcloud(augus提供)'
           },
           {
@@ -526,7 +541,7 @@ export default {
       form: {
         sourceSubUrl: '',
         clientType: 'clash&new_name=true',
-        customBackend: 'https://augus.myqnapcloud.com:25499/sub?',
+        customBackend: 'https://augus.myqnapcloud.com:39103/sub?',
         remoteConfig: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini',
         excludeRemarks: '',
         includeRemarks: '',
@@ -580,6 +595,7 @@ export default {
   mounted() {
     this.notify()
     this.getBackendVersion()
+    // console.log(this.$route.query)
   },
   methods: {
     onCopy() {
@@ -611,6 +627,12 @@ export default {
 
       const url = 'surge://install-config?url='
       window.open(url + this.customSubUrl)
+    },
+    copyUrl1(){
+      this.$copyText('clash://install-config?url=' + encodeURIComponent(this.form.sourceSubUrl + '&filename=' + this.form.filename))
+    },
+    copyUrl2(){
+      this.$copyText('clash://install-config?url=' + encodeURIComponent(this.customSubUrl))
     },
     appearObject(){
       this.$notify({
