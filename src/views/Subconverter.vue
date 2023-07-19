@@ -543,18 +543,18 @@ export default {
         clientType: 'clash',
         customBackend: 'https://augus.myqnapcloud.com:39103/sub?',
         remoteConfig: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini',
-        excludeRemarks: '',
+        excludeRemarks: '流量|官网',
         includeRemarks: '',
         filename: '',
         emoji: true,
         nodeList: false,
         extraset: false,
-        sort: false,
+        sort: true,
         udp: false,
         tfo: false,
         scv: true,
-        fdn: false,
-        appendType: false,
+        fdn: true,
+        appendType: true,
         insert: false, // 是否插入默认订阅的节点，对应配置项 insert_url
         new_name: true, // 是否使用 Clash 新字段
 
