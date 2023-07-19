@@ -543,7 +543,7 @@ export default {
         clientType: 'clash',
         customBackend: 'https://augus.myqnapcloud.com:39103/sub?',
         remoteConfig: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini',
-        excludeRemarks: '流量|官网',
+        excludeRemarks: '流量|官网|TG群|套餐|剩余',
         includeRemarks: '',
         filename: '',
         emoji: true,
