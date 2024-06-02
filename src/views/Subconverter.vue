@@ -357,6 +357,11 @@ export default {
                         label: "ACL规则",
                         options: [
                             {
+                                label: "ACL4SSR_Online配合白衣风吟的直连规则",
+                                value:
+                                    "https://raw.githubusercontent.com/mmzhw/sub-web/master/rules/ACL4SSR_Online_Full_MultiMode_Custom.ini"
+                            },
+                            {
                                 label: "ACL4SSR_Online 默认版 分组比较全(与Github同步)",
                                 value:
                                     "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini"
@@ -463,7 +468,7 @@ export default {
                 sourceSubUrl: '',
                 clientType: 'clash',
                 customBackend: 'https://augus.myqnapcloud.com:39103',
-                remoteConfig: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini',
+                remoteConfig: 'https://raw.githubusercontent.com/mmzhw/sub-web/master/rules/ACL4SSR_Online_Full_MultiMode_Custom.ini',
                 excludeRemarks: '流量|官网|TG群|套餐|剩余|测试',
                 includeRemarks: '',
                 filename: '',
