@@ -469,7 +469,7 @@ export default {
                 clientType: 'clash',
                 customBackend: 'https://augus.myqnapcloud.com:39103',
                 remoteConfig: 'https://raw.githubusercontent.com/mmzhw/sub-web/master/rules/ACL4SSR_Online_Full_MultiMode_Custom.ini',
-                excludeRemarks: '流量|官网|TG群|套餐|剩余|测试|官网|更新|代表|永久地址',
+                excludeRemarks: '流量|官网|TG群|套餐|剩余|测试|官网|更新|代表|永久|地址|订阅',
                 includeRemarks: '',
                 filename: '',
                 emoji: true,
