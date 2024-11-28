@@ -340,7 +340,7 @@ export default {
                     Surge2: "surge&ver=2",
                 },
                 backendOptions: [
-                    {value: 'https://augus.myqnapcloud.com:39103', label: '白衣风吟提供'},
+                    {value: 'https://augussubconverter.tocmcc.cn', label: '白衣风吟提供'},
                     {value: 'https://sub.id9.cc', label: '品云提供-稳定'},
                     {value: 'https://sub.xeton.dev', label: 'subconverter作者提供-稳定'},
                     {value: 'https://api.dler.io', label: 'lhie1提供-稳定'},
@@ -467,7 +467,7 @@ export default {
             form: {
                 sourceSubUrl: '',
                 clientType: 'clash',
-                customBackend: 'https://augus.myqnapcloud.com:39103',
+                customBackend: 'https://augussubconverter.tocmcc.cn',
                 remoteConfig: 'https://raw.githubusercontent.com/mmzhw/sub-web/master/rules/ACL4SSR_Online_Full_MultiMode_Custom.ini',
                 excludeRemarks: '流量|官网|TG群|套餐|剩余|测试|官网|更新|代表|永久|地址|订阅',
                 includeRemarks: '',
