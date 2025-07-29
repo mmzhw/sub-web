@@ -340,7 +340,8 @@ export default {
                     Surge3: 'surge&ver=3',
                 },
                 backendOptions: [
-                    {value: 'https://augussubconverter.tocmcc.cn', label: '白衣风吟提供'},
+                    {value: 'https://augussubconverter.x.ddnsto.com', label: '白衣风吟提供'},
+                    {value: 'http://192.168.0.110:39203', label: '白衣风吟提供'},
                     {value: 'https://sub.id9.cc', label: '品云提供-稳定'},
                     {value: 'https://sub.xeton.dev', label: 'subconverter作者提供-稳定'},
                     {value: 'https://api.dler.io', label: 'lhie1提供-稳定'},
@@ -449,8 +450,8 @@ export default {
             form: {
                 sourceSubUrl: '',
                 clientType: 'clash',
-                customBackend: 'https://augussubconverter.tocmcc.cn',
-                remoteConfig: 'https://raw.githubusercontent.com/mmzhw/sub-web/master/rules/ACL4SSR_Online_Full_MultiMode_Custom.ini',
+                customBackend: '',
+                remoteConfig: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini',
                 excludeRemarks: '流量|官网|TG群|套餐|剩余|测试|官网|更新|代表|永久|地址|订阅',
                 includeRemarks: '',
                 filename: '',
